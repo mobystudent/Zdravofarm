@@ -1,0 +1,115 @@
+.burger {
+	width: 100%;
+	max-width: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: url(../img/burger-bg.png) no-repeat;
+	background-size: cover;
+	padding: 45px 0 28px;
+	display: flex;
+	justify-content: space-between;
+	display: none;
+
+	&__wrap {
+		max-width: 670px;
+		flex: 1 0 auto;
+		padding-left: 41px;
+	}
+
+	li {
+		font-size: 18px;
+		line-height: 32px;
+		font-family: OswaldLight, sans-serif;
+		letter-spacing: .4px;
+		color: #fff;
+		text-transform: uppercase;
+		transition: padding .2s ease-out;
+		cursor: pointer;
+	}
+
+	&__menu {
+		margin-bottom: 35px;
+
+		li {
+			position: relative;
+			padding: 6px 0;
+
+			&:hover {
+				font-family: OswaldMedium, sans-serif;
+				padding-left: 30px;
+				color: #cf8b3b;
+
+				&:before {
+					@include before(10px,12px);
+					top: 15px;
+					left: 13px;
+					background: url(../img/arrow-white.png) no-repeat;
+					background-size: cover;
+				}
+			}
+		}
+	}
+
+	&__social {
+		position: relative;
+
+		&:before {
+			@include before(21px,2px);
+			top: -20px;
+			left: 0;
+			background: #f2ab1f;
+		}
+
+		li {
+			padding: 1px 0;
+
+			&:hover {
+				color: #cf8b3b;
+			}
+		}
+	}
+
+	.lang {
+		display: flex;
+		position: absolute;
+		right: 7px;
+		bottom: 29px;
+
+		li {
+			font-family: OswaldExtraLight, sans-serif;
+			padding: 0px 10px 0 9px;
+
+			&:first-child {
+				position: relative;
+
+				&:before {
+					@include before(2px,18px);
+					top: 8px;
+					right: 0;
+					background: #fff;
+				}
+			}
+		}
+
+		.span--lang-active {
+			font-family: OswaldMedium, sans-serif;
+		}
+	}
+
+	&__close {
+		color: #fff;
+		font-size: 12px;
+		top: 35px;
+		right: 25px;
+		padding-right: 28px;
+
+		&:before {
+			@include before(12px,12px);
+			top: 1px;
+			right: 0;
+			background: url(../img/close.png) -36px 0 no-repeat;
+			background-size: cover;
+		}
+	}
+}

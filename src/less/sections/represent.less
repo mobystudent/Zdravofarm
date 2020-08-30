@@ -1,0 +1,138 @@
+.main-screen {
+	background: #cf8c3d;
+	max-width: 1920px;
+	// width: 1920px;
+	width: 100%;
+	position: relative;
+
+	.span--psevdo-left {
+		display: none;
+	}
+
+	.span--psevdo-subscribe {
+		text-transform: uppercase;
+		font-weight: 100;
+		position: relative;
+		color: #fff;
+		position: absolute;
+		bottom: 317px;
+		padding-right: 25px;
+		transform: rotate(-90deg);
+		transform-origin: top;
+		cursor: pointer;
+	}
+
+	.span--arrow-down {
+		width: 55px;
+		height: 15px;
+		position: absolute;
+		cursor: pointer;
+		left: 50%;
+		bottom: 35px;
+		transform: rotate(-90deg);
+		transform-origin: 0 0;
+
+		&:before {
+			@include before(42px,1px);
+			left: 13px;
+			top: 7px;
+			background: #fff;
+		}
+
+		&:after {
+			@include after(11px,15px);
+			left: 0;
+			top: 0;
+			transform: rotate(-180deg);
+			background: url(../img/arrow-white.png) no-repeat;
+			background-size: cover;
+		}
+	}
+
+	.recall {
+		width: 57px;
+		height: 57px;
+		border-radius: 50%;
+		background: $colorText;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		bottom: 48px;
+		right: 104px;
+		cursor: pointer;
+
+		img {
+			margin-left: -2px;
+		}
+	}
+}
+
+.slide {
+	&__descrip-wrap {
+		flex: 1 0 auto;
+	}
+
+	&__title {
+		font: 77px/81px OswaldMedium, sans-serif;
+		color: #fff;
+		letter-spacing: 1.4px;
+		max-width: 700px;
+		text-transform: uppercase;
+		margin-bottom: 110px;
+		position: relative;
+		opacity: 0;
+		padding-right: 30px;
+		box-sizing: border-box;
+
+		&:before {
+			@include before(21px,2px);
+			bottom: -47px;
+			left: 0;
+			background: #f2ab1f;
+		}
+	}
+
+	&__p {
+		font-size: 24px;
+		color: $colorText;
+		line-height: 30px;
+		font-weight: 100;
+		max-width: 510px;
+		margin-bottom: 60px;
+		opacity: 0;
+	}
+
+	&__btn {
+		text-transform: uppercase;
+		font-weight: bold;
+		color: $colorText;
+		letter-spacing: 1px;
+		font-size: 16px;
+		line-height: 20px;
+		text-align: center;
+		background: #fff;
+		padding: 20px 0;
+		max-width: 250px;
+		border-radius: 35px;
+		opacity: 0;
+	}
+
+	&__img-wrap {
+		background: url(../img/main-bg.jpg) top right no-repeat;
+		background-size: cover;
+		position: relative;
+		max-width: 943px;
+		display: flex;
+		align-items: flex-end;
+		overflow: hidden;
+		flex: 1 0 auto;
+	}
+
+	&__img {
+		width: 100%;
+		opacity: 0;
+		display: flex;
+		justify-content: center;
+	}
+}

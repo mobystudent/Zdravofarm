@@ -1,0 +1,23 @@
+.form__inputs {
+	display: flex;
+	flex-flow: column wrap;
+	width: 100%;
+	max-width: 285px;
+	margin-bottom: 19px;
+
+	input {
+		border: 1px solid #c1c1c1;
+		padding: 9px 10px 9px 21px;
+		border-radius: 50px;
+		font-weight: 100;
+		font-size: 10px;
+		letter-spacing: .5px;
+		margin-bottom: 4px;
+
+		&:focus {
+			border-color: #b77309;
+		}
+
+		@include placeholder(#c1c1c1);
+	}
+}

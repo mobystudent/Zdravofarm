@@ -1,0 +1,82 @@
+.animate .why-we__title, .animate .shop__title {
+	animation: toRight 1s ease-in-out .2s forwards;
+}
+
+.slide__title {
+	animation: toTop 1s ease-in-out .2s forwards;
+}
+
+.slide__p {
+	animation: toTop 1s ease-in-out .4s forwards;
+}
+
+.slide__btn {
+	animation: toTop 1s ease-in-out .6s forwards;
+}
+
+.slide__img {
+	animation: toLeft 1s ease-in-out .2s forwards;
+}
+
+@for $i from 1 through 4 {
+	.animate .why-we__list li:nth-child(#{$i}) {
+		animation: toRight 1s ease-in-out .2s*$i forwards;
+	}
+}
+
+@for $i from 1 through 4 {
+	.animate .why-we__text p:nth-child(#{$i}) {
+		animation: toLeft 1s ease-in-out .2s*$i forwards;
+	}
+}
+
+@for $i from 1 through 10 {
+	.animate .shop__item:nth-child(#{$i}) {
+		animation: toRight 1s ease-in-out .1s*$i forwards;
+	}
+}
+
+@for $i from 0 through 3 {
+	.animate dt:nth-child(#{$i*2+1}) {
+		animation: toLeft 1s ease-in-out .2s*$i+.2 forwards;
+	}
+}
+
+@for $i from 1 through 4 {
+	.animate dd:nth-child(#{$i*2}) {
+		animation: toLeft 1s ease-in-out .2s*$i forwards;
+	}
+}
+
+@keyframes toRight {
+	from {
+		transform: translateX(-50%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes toLeft {
+	from {
+		transform: translateX(50%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes toTop {
+	from {
+		transform: translateY(150%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}

@@ -1,0 +1,34 @@
+.slick {
+	&-dotted.slick-slider {
+		margin: 0;
+	}
+
+	&-dots {
+		bottom: 0;
+		width: auto;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		height: 100%;
+
+		li {
+			position: relative;
+			margin: 0 0 41px;
+
+			&:first-child {
+				padding-top: 35px;
+			}
+
+			&:not(:last-child):before {
+				@include before(1px,22px);
+				bottom: -32px;
+				left: 10px;
+				background: $colorText;
+			}
+		}
+	}
+
+	&-active {
+		color: #fff;
+	}
+}
