@@ -20,10 +20,11 @@
 			}
 
 			&:not(:last-child):before {
-				@include before(1px,22px);
+				width: 1px;
+				height: 22px;
 				bottom: -32px;
 				left: 10px;
-				background: $colorText;
+				background: @dimGray;
 			}
 		}
 	}

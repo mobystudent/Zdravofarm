@@ -1,0 +1,34 @@
+.placeholder-mixin(@font, @color) {
+	&::placeholder {
+		color: @color;
+		opacity: 1;
+		text-transform: uppercase;
+		font: @font;
+	}
+
+	&::-ms-placeholder {
+		color: @color;
+		opacity: 1;
+		text-transform: uppercase;
+		font: @font;
+	}
+
+	&:-ms-input-placeholder {
+		color: @color;
+		opacity: 1;
+		text-transform: uppercase;
+		font: @font;
+	}
+
+	&:focus:placeholder {
+		opacity: 0;
+	}
+
+	&:focus::-ms-placeholder {
+		opacity: 0;
+	}
+
+	&:focus:-ms-input-placeholder {
+		opacity: 0;
+	}
+}

@@ -1,8 +1,17 @@
 {
   "name": "zdravofarm",
   "version": "1.0.0",
-  "description": "",
+  "description": "Окружение для разработки веб-проектов",
   "main": "index.js",
+  "author": "mobystudent",
+  "license": "MIT",
+  "scripts": {
+    "watch": "gulp watch --dev",
+    "prodwatch": "gulp watch",
+    "devbuild": "gulp --dev",
+    "build": "gulp",
+    "clean": "gulp clean"
+  },
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.26.12",
@@ -15,10 +24,5 @@
     "gulp-less": "^4.0.1",
     "gulp-pug": "^4.0.1",
     "gulp-sourcemaps": "^2.6.5"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+  }
 }

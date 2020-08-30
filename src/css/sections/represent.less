@@ -33,14 +33,16 @@
 		transform-origin: 0 0;
 
 		&:before {
-			@include before(42px,1px);
+			width: 42px;
+			height: 1px;
 			left: 13px;
 			top: 7px;
 			background: #fff;
 		}
 
 		&:after {
-			@include after(11px,15px);
+			width: 11px;
+			height: 15px;
 			left: 0;
 			top: 0;
 			transform: rotate(-180deg);
@@ -53,7 +55,7 @@
 		width: 57px;
 		height: 57px;
 		border-radius: 50%;
-		background: $colorText;
+		background: @dimGray;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -86,7 +88,8 @@
 		box-sizing: border-box;
 
 		&:before {
-			@include before(21px,2px);
+			width: 21px;
+			height: 2px;
 			bottom: -47px;
 			left: 0;
 			background: #f2ab1f;
@@ -95,7 +98,7 @@
 
 	&__p {
 		font-size: 24px;
-		color: $colorText;
+		color: @dimGray;
 		line-height: 30px;
 		font-weight: 100;
 		max-width: 510px;
@@ -106,7 +109,7 @@
 	&__btn {
 		text-transform: uppercase;
 		font-weight: bold;
-		color: $colorText;
+		color: @dimGray;
 		letter-spacing: 1px;
 		font-size: 16px;
 		line-height: 20px;

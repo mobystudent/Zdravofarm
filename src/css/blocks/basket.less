@@ -122,6 +122,8 @@
 
 		&:before, &:after {
 			top: -4px;
+			width: 18px;
+			height: 18px;
 			line-height: 100%;
 			background: #eceaea;
 			border-radius: 50%;
@@ -131,13 +133,11 @@
 		}
 
 		&:before {
-			@include before(18px,18px);
 			content: '-';
 			left: 0;
 		}
 
 		&:after {
-			@include after(18px,18px);
 			content: '+';
 			right: 0;
 		}

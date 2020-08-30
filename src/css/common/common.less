@@ -2,7 +2,7 @@ body {
 	background: #eceaea;
 	max-width: 1920px;
 	margin: 0 auto;
-	color: $colorText;
+	color: @dimGray;
 }
 
 .title--font {
@@ -23,17 +23,19 @@ body {
 	transform: rotate(-90deg);
 
 	&:before {
-		@include before(21px,2px);
+		width: 21px;
+		height: 2px;
 		top: 9px;
 		left: 0;
-		background: $colorText;
+		background: @dimGray;
 	}
 
 	&:after {
-		@include after(27px,1px);
+		width: 27px;
+		height: 1px;
 		top: 9px;
 		right: 0;
-		background: $colorText;
+		background: @dimGray;
 	}
 }
 
