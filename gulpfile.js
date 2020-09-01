@@ -106,6 +106,7 @@ function gulpWatch() {
 	gulp.watch(path.watch.css, gulp.series(gulpLess));
 	gulp.watch(path.watch.fonts, gulp.series(gulpFonts));
 	gulp.watch(path.watch.pug, gulp.series(gulpPug));
+	gulp.watch(path.watch.html, gulp.series(gulpHTML));
 	gulp.watch(path.watch.img, gulp.series(gulpImages));
 	gulp.watch(path.watch.favicon, gulp.series(gulpFavicon));
 	gulp.watch(path.watch.js, gulp.series(gulpJS));

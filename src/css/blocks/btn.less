@@ -1,9 +1,64 @@
 .btn {
-	font-size: 16px;
-	color: #fff;
-	width: 100%;
-	max-width: 250px;
-	text-transform: uppercase;
+	display: inline-block;
 	text-align: center;
-	border-radius: 30px;
+
+	&--represent {
+		font: 16px @CalibriBold;
+		color: @dimGray;
+		background: @white;
+		border-radius: 30px;
+		padding: 20px 50px;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+		min-width: 250px;
+	}
+
+	&--next-screen {
+		position: absolute;
+		bottom: 50px;
+		left: 50%;
+		width: 18px;
+		height: 55px;
+		transform: translateX(-50%);
+	}
+
+	&--subscribe {
+		position: relative;
+		text-transform: uppercase;
+		font: 14px @CalibriLight;
+		color: @white;
+		transform: rotate(-90deg);
+		transform-origin: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 150px;
+		height: 150px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 5px;
+			width: 15px;
+			height: 9px;
+			background: url("../img/arrow.svg") no-repeat;
+			background-size: cover;
+			transform: translateY(-50%) rotate(90deg);
+		}
+
+		// &:after {
+		// 	content: '';
+		// 	position: absolute;
+		//
+		// }
+	}
+
+	&__line {
+		display: inline-block;
+		width: 1px;
+		height: 40px;
+		background: @white;
+		margin: 0 auto;
+	}
 }
