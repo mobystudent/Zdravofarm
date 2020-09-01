@@ -2,7 +2,23 @@ body {
 	background: @lightGray;
 	max-width: 1920px;
 	margin: 0 auto;
+	display: flex;
+	flex-flow: column;
 	color: @dimGray;
+}
+
+.wrapper {
+	display: flex;
+	flex-flow: column;
+	min-height: 100vh;
+}
+
+.main {
+	flex: 1 0 auto;
+	background: @white;
+	position: relative;
+	z-index: 0;
+	overflow: hidden;
 }
 
 // .title--font {

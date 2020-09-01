@@ -14,8 +14,18 @@
       <symbol id="arrow" viewBox="0 0 28 17">
         <path d="M2 2l12 12L26 2" stroke-width="3" fill="none"></path>
       </symbol>
+      <symbol id="basket" viewBox="0 0 29 25">
+        <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAZCAQAAABnC+2SAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElN RQfkCQESHwrGgGa+AAABX0lEQVQ4y5WUvUoDQRSFz042cTUYlYhoMCFiI5aCmMLCNBaCpBH0CaIP IdYWglhYCkIaH0DwHSwMYiGGICoqBhFJwF0IxGMxWbMz7hLn3mbO5X7L2fm5IEIzxe3uKs/l8B5E oHuc764SrJqgDq8C6oC5/6M7XAqoaR6FdVnMogI1BrCAS3R+tYUCruFqXZtghvuMK1nmllbZYFmr HHMcHNXsCNYpNHMx1mgplQqTAh5mFSNF7OJbM9fBCeaUSh5tUPAm8DWLd4yHbEqaZ4pu0AJBL1Cy uRhx0sOKasrDedD+o3/GWCUEgDpsmEUC94AA8ISEIerg0UeHDNEkXiT6jJQhmsKbRN8xYoimffQD Y8bop49OGaITaEq0hUlDNIuWRF1kjFFXoh5mDNEc2oC88q9GV1Gw0RswJR7+eaNRafOUa8HZtMJb rtLpgw1ynTUW9LFms8QLeoyOL56z2HP3AypewRdqaShVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIw LTA5LTAxVDE4OjMxOjEwKzAzOjAwE4T66gAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMC0wOS0wMVQx ODozMToxMCswMzowMGLZQlYAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAA AElFTkSuQmCC"></image>
+      </symbol>
     </svg>
     <div class="wrapper">
+      <header class="header"><a class="logo" href="#"><img src="img/logo.png" alt="logo"></a>
+        <div class="header__control"><a class="btn btn--basket" href="#"><span class="btn__text btn__text--header">корзина</span>
+            <svg class="icon icon--basket">
+              <use class="icon__item" xlink:href="#basket"></use>
+            </svg></a><a class="btn btn--menu" href="#"><span class="btn__text btn__text--header">меню</span>
+            <div class="btn__icon"><small class="btn__line btn__line--burger btn__line--burger-top"></small><small class="btn__line btn__line--burger btn__line--burger-mid"></small><small class="btn__line btn__line--burger btn__line--burger-bot"></small></div></a></div>
+      </header>
       <main class="main">
         <section class="represent represent--item-1 section">
           <div class="container">
@@ -38,7 +48,7 @@
                 </div>
               </div>
             </div>
-          </div><a class="btn btn--next-screen" href="#"><small class="btn__line"></small>
+          </div><a class="btn btn--next-screen" href="#"><small class="btn__line btn__line--next-screen"></small>
             <svg class="icon icon--next-screen">
               <use class="icon__item" xlink:href="#arrow"></use>
             </svg></a>
