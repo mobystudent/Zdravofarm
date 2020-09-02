@@ -1,0 +1,169 @@
+.shop {
+	padding-top: 30px;
+	margin-bottom: 85px;
+
+	&__content {
+		position: relative;
+	}
+
+	&__title {
+		font: 77px/80px @OswaldMedium;
+		text-transform: uppercase;
+		margin-bottom: 60px;
+		padding-left: 130px;
+	}
+
+	&__wrap {
+		display: flex;
+	}
+
+	&__part {
+		&--left {
+			flex: 0 0 auto;
+			width: 720px;
+			padding: 80px 55px 85px 55px;
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -160px;
+				width: 875px;
+				height: 100%;
+				background: @lightBlue;
+				z-index: -1;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -160px;
+				width: 875px;
+				height: 1185px;
+				background: url("../img/romb-shop.png") no-repeat;
+				background-size: cover;
+				z-index: -1;
+			}
+		}
+
+		&--right {
+			flex: 1 1 auto;
+			padding-top: 50px;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		margin-bottom: 95px;
+		padding-left: 15px;
+	}
+
+	&__items {
+		display: flex;
+		flex-flow: wrap;
+		margin-right: -65px;
+	}
+
+	&__item {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		width: 30%;
+		max-width: 160px;
+		margin-bottom: 45px;
+		margin-right: 65px;
+
+		&:hover {
+			.shop__name {
+				font-family: @CalibriBold;
+			}
+
+			.shop__img:before {
+				transform: scale(1.15);
+			}
+		}
+	}
+
+	&__img {
+		display: inline-block;
+		width: 80px;
+		height: 130px;
+		margin-bottom: 15px;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: -5px;
+			left: -5px;
+			width: 90px;
+			height: 140px;
+			background: url("../img/can-shadow.png") no-repeat;
+			background-size: cover;
+			transition: transform .25s ease-in-out;
+			z-index: -1;
+		}
+	}
+
+	&__name {
+		font: 24px @CalibriRegular;
+		color: @white;
+	}
+
+	&__preview-title {
+		font: 48px @CalibriBold;
+		text-align: center;
+		padding-left: 255px;
+		margin-bottom: 65px;
+	}
+
+	&__preview {
+		display: flex;
+	}
+
+	&__descrip {
+		margin-bottom: 115px;
+		padding-left: 20px;
+	}
+
+	&__spec {
+		padding-left: 60px;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 15px;
+			left: 0;
+			height: 2px;
+			width: 20px;
+			background: @orange;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 35px;
+		}
+	}
+
+	&__spec-title {
+		font: 24px @CalibriBold;
+		margin-bottom: 10px;
+	}
+
+	&__text {
+		font: 24px/28px @CalibriLight;
+	}
+
+	&__price {
+		font: 36px @OswaldMedium;
+		margin-bottom: 55px;
+		display: inline-block;
+
+		&:after {
+			content: 'грн.';
+			padding-left: 10px;
+		}
+	}
+}

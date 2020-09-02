@@ -1,0 +1,28 @@
+.counter {
+	display: flex;
+	align-items: center;
+	margin-bottom: 35px;
+
+	&__btn {
+		width: 22px;
+		height: 22px;
+		border-radius: 50%;
+		background: @white;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__count {
+		font: 14px @HelveticaNeueCyrBold;
+		letter-spacing: .02em;
+		display: inline-block;
+		text-transform: uppercase;
+		padding: 0 20px;
+
+		&:after {
+			content: 'шт.';
+			padding-left: 5px;
+		}
+	}
+}

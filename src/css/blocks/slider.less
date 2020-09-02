@@ -1,28 +1,67 @@
 .slider {
-	padding-right: 70px;
-	position: relative;
+	&--represent {
+		padding-right: 70px;
+		position: relative;
+	}
+
+	&--shop {
+		width: 450px;
+		flex: 0 0 auto;
+		min-height: 650px;
+		padding: 0 20px 0 60px;
+	}
+
+	&__content {
+		&--shop {
+			padding-top: 75px;
+			margin-bottom: 30px;
+		}
+	}
 
 	&__slide {
 		overflow: hidden;
+
+		&--show {
+			display: flex;
+			justify-content: center;
+		}
 	}
 
 	&__img {
-		width: 1040px;
-		height: 625px;
-		margin-left: -190px;
+		display: inline-block;
+
+		&--represent {
+			width: 1040px;
+			height: 625px;
+			margin-left: -190px;
+		}
+
+		&--shop {
+			width: 340px;
+			height: 510px;
+		}
 	}
 
 	&__control {
-		position: absolute;
-		top: 0;
-		right: 15px;
-		height: 100%;
-		width: 20px;
-		display: flex;
-		flex-flow: column;
-		align-items: center;
-		justify-content: space-between;
-		padding-bottom: 65px;
+		&--represent {
+			position: absolute;
+			top: 0;
+			right: 15px;
+			height: 100%;
+			width: 20px;
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+			justify-content: space-between;
+			padding-bottom: 65px;
+		}
+
+		&--shop {
+			display: flex;
+			justify-content: space-between;
+			width: 130px;
+			margin: 0 auto;
+		}
 	}
 
 	&__count-slides {
@@ -50,5 +89,14 @@
 		height: 22px;
 		background: @dimGray;
 		margin: 10px 0;
+	}
+
+	&__btn {
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }
