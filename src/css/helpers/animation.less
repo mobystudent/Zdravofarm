@@ -1,22 +1,22 @@
-.animate .why-we__title, .animate .shop__title {
-	animation: toRight 1s ease-in-out .2s forwards;
-}
-
-.slide__title {
-	animation: toTop 1s ease-in-out .2s forwards;
-}
-
-.slide__p {
-	animation: toTop 1s ease-in-out .4s forwards;
-}
-
-.slide__btn {
-	animation: toTop 1s ease-in-out .6s forwards;
-}
-
-.slide__img {
-	animation: toLeft 1s ease-in-out .2s forwards;
-}
+// .animate .why-we__title, .animate .shop__title {
+// 	animation: toRight 1s ease-in-out .2s forwards;
+// }
+//
+// .slide__title {
+// 	animation: toTop 1s ease-in-out .2s forwards;
+// }
+//
+// .slide__p {
+// 	animation: toTop 1s ease-in-out .4s forwards;
+// }
+//
+// .slide__btn {
+// 	animation: toTop 1s ease-in-out .6s forwards;
+// }
+//
+// .slide__img {
+// 	animation: toLeft 1s ease-in-out .2s forwards;
+// }
 
 // @for $i from 1 through 4 {
 // 	.animate .why-we__list li:nth-child(#{$i}) {
@@ -48,35 +48,56 @@
 // 	}
 // }
 
-@keyframes toRight {
-	from {
-		transform: translateX(-50%);
-		opacity: 0;
-	}
-	to {
-		transform: translateX(0);
-		opacity: 1;
-	}
-}
+// @keyframes toRight {
+// 	from {
+// 		transform: translateX(-50%);
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		transform: translateX(0);
+// 		opacity: 1;
+// 	}
+// }
+//
+// @keyframes toLeft {
+// 	from {
+// 		transform: translateX(50%);
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		transform: translateX(0);
+// 		opacity: 1;
+// 	}
+// }
+//
+// @keyframes toTop {
+// 	from {
+// 		transform: translateY(150%);
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		transform: translateY(0);
+// 		opacity: 1;
+// 	}
+// }
+//
+// @keyframes toTop {
+// 	from {
+// 		transform: translateY(150%);
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		transform: translateY(0);
+// 		opacity: 1;
+// 	}
+// }
 
-@keyframes toLeft {
+@keyframes changeSizeLine {
 	from {
-		transform: translateX(50%);
-		opacity: 0;
+		height: 25px;
 	}
-	to {
-		transform: translateX(0);
-		opacity: 1;
-	}
-}
 
-@keyframes toTop {
-	from {
-		transform: translateY(150%);
-		opacity: 0;
-	}
 	to {
-		transform: translateY(0);
-		opacity: 1;
+		height: 50px;
 	}
 }

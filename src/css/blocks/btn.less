@@ -1,6 +1,7 @@
 .btn {
 	display: inline-block;
 	text-align: center;
+	cursor: pointer;
 
 	&--represent {
 		font: 16px @CalibriBold;
@@ -20,6 +21,36 @@
 		width: 18px;
 		height: 55px;
 		transform: translateX(-50%);
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 1px;
+			height: 25px;
+			background: @white;
+			transform: translateX(-50%);
+			transition: height .25s ease-in-out;
+			animation: changeSizeLine 1s ease-in-out infinite;
+			opacity: 0;
+		}
+
+		&:hover {
+			.btn__line {
+				height: 50px;
+				opacity: 0;
+			}
+
+			&:before {
+				opacity: 1;
+				width: 2px;
+			}
+
+			.icon {
+				transform: translateY(10px);
+			}
+		}
 	}
 
 	&--subscribe {
@@ -34,6 +65,7 @@
 		align-items: center;
 		width: 150px;
 		height: 150px;
+		transition: font-size .15s ease-in-out .05s;
 
 		&:before {
 			content: '';
@@ -44,14 +76,17 @@
 			height: 9px;
 			background: url("../img/arrow.svg") no-repeat;
 			background-size: cover;
+			transition: transform .25s ease-in-out;
 			transform: translateY(-50%) rotate(90deg);
 		}
 
-		// &:after {
-		// 	content: '';
-		// 	position: absolute;
-		//
-		// }
+		&:hover {
+			font-size: 16px;
+
+			&:before {
+				transform: translate(-130px, -50%) rotate(90deg);
+			}
+		}
 	}
 
 	&--basket {
@@ -99,26 +134,7 @@
 
 	&--menu {
 		display: flex;
-
-		&-active {
-			.btn__line--burger {
-				width: 24px;
-
-				&-top {
-					transform: rotate(41deg);
-					transform-origin: left;
-				}
-
-				&-mid {
-					display: none;
-				}
-
-				&-bot {
-					transform: rotate(-41deg);
-					transform-origin: left;
-				}
-			}
-		}
+		align-items: center;
 	}
 
 	&__icon {
@@ -136,22 +152,29 @@
 		}
 
 		&--burger {
-			position: absolute;
-			left: 0;
+			position: relative;
 			height: 2px;
 			width: 28px;
 			background: @white;
 
-			&-top {
-				top: 0;
+			&:before {
+				content: '';
+				position: absolute;
+				top: -8px;
+				left: 0;
+				height: 2px;
+				width: 28px;
+				background: @white;
 			}
 
-			&-mid {
-				top: 8px;
-			}
-
-			&-bot {
-				top: 16px;
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: -8px;
+				left: 0;
+				height: 2px;
+				width: 28px;
+				background: @white;
 			}
 		}
 	}
