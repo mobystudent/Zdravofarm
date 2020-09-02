@@ -1,0 +1,32 @@
+.social {
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: -25px;
+		left: 0;
+		height: 2px;
+		width: 20px;
+		background: @orange;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__link {
+		font: 36px/50px @OswaldLight;
+		letter-spacing: .04em;
+		color: @white;
+		text-transform: uppercase;
+		cursor: pointer;
+		transition: color .25s ease-in-out;
+
+		&:hover {
+			color: @darkOrange;
+		}
+	}
+}

@@ -1,0 +1,41 @@
+.menu {
+	margin-bottom: 90px;
+
+	&__item {
+		overflow: hidden;
+
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
+	}
+
+	&__link {
+		font: 36px/50px @OswaldLight;
+		letter-spacing: .04em;
+		color: @white;
+		text-transform: uppercase;
+		transition: color .25s ease-in-out, transform .25s ease-in-out;
+		cursor: pointer;
+		position: relative;
+		display: inline-block;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 20px;
+			left: -35px;
+			width: 20px;
+			height: 12px;
+			background: url(../img/arrow.svg) no-repeat;
+			background-size: cover;
+			transform: rotate(-90deg);
+			transition: transform .25s ease-in-out;
+		}
+
+		&:hover {
+			font-family: @OswaldMedium;
+			transform: translateX(50px);
+			color: @darkOrange;
+		}
+	}
+}

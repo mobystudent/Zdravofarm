@@ -1,119 +1,35 @@
 .burger {
-	width: 100%;
-	max-width: 100%;
+	width: 50%;
+	height: 100%;
 	position: absolute;
 	right: 0;
 	top: 0;
-	background: url(../img/burger-bg.png) no-repeat;
-	background-size: cover;
-	padding: 45px 0 28px;
 	display: flex;
-	justify-content: space-between;
-	display: none;
+	justify-content: center;
+	background: #f00;
+	padding: 138px 0 28px 125px;
+	transform: translateX(100%);
+	z-index: 20;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url(../img/romb-burger.png) 0 0 no-repeat;
+		background-size: 940px 745px;
+		z-index: -1;
+	}
 
 	&__wrap {
-		max-width: 670px;
-		flex: 1 0 auto;
-		padding-left: 41px;
+		width: 510px;
 	}
 
-	li {
-		font-size: 18px;
-		line-height: 32px;
-		font-family: OswaldLight, sans-serif;
-		letter-spacing: .4px;
-		color: #fff;
-		text-transform: uppercase;
-		transition: padding .2s ease-out;
-		cursor: pointer;
-	}
-
-	&__menu {
-		margin-bottom: 35px;
-
-		li {
-			position: relative;
-			padding: 6px 0;
-
-			&:hover {
-				font-family: OswaldMedium, sans-serif;
-				padding-left: 30px;
-				color: #cf8b3b;
-
-				&:before {
-					width: 10px;
-					height: 12px;
-					top: 15px;
-					left: 13px;
-					background: url(../img/arrow-white.png) no-repeat;
-					background-size: cover;
-				}
-			}
-		}
-	}
-
-	&__social {
-		position: relative;
-
-		&:before {
-			width: 21px;
-			height: 2px;
-			top: -20px;
-			left: 0;
-			background: #f2ab1f;
-		}
-
-		li {
-			padding: 1px 0;
-
-			&:hover {
-				color: #cf8b3b;
-			}
-		}
-	}
-
-	.lang {
+	&__footer {
 		display: flex;
-		position: absolute;
-		right: 7px;
-		bottom: 29px;
-
-		li {
-			font-family: OswaldExtraLight, sans-serif;
-			padding: 0px 10px 0 9px;
-
-			&:first-child {
-				position: relative;
-
-				&:before {
-					width: 2px;
-					height: 18px;
-					top: 8px;
-					right: 0;
-					background: #fff;
-				}
-			}
-		}
-
-		.span--lang-active {
-			font-family: OswaldMedium, sans-serif;
-		}
-	}
-
-	&__close {
-		color: #fff;
-		font-size: 12px;
-		top: 35px;
-		right: 25px;
-		padding-right: 28px;
-
-		&:before {
-			width: 12px;
-			height: 12px;
-			top: 1px;
-			right: 0;
-			background: url(../img/close.png) -36px 0 no-repeat;
-			background-size: cover;
-		}
+		align-items: flex-end;
+		justify-content: space-between;
 	}
 }

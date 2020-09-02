@@ -60,6 +60,43 @@
 		margin-right: 60px;
 	}
 
+	&--close {
+		&-burger {
+			position: absolute;
+			top: 50px;
+			right: 165px;
+			text-transform: uppercase;
+			font: 16px @CalibriBold;
+			letter-spacing: .07em;
+			color: @white;
+			padding-right: 35px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 25px;
+				height: 2px;
+				background: @white;
+				transform: rotate(-45deg);
+				transform-origin: right;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 25px;
+				height: 2px;
+				background: @white;
+				transform: rotate(45deg);
+				transform-origin: right;
+			}
+		}
+	}
+
 	&--menu {
 		display: flex;
 
@@ -86,6 +123,7 @@
 
 	&__icon {
 		position: relative;
+		width: 28px;
 	}
 
 	&__line {
