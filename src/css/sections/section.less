@@ -4,10 +4,13 @@
 	&__name {
 		position: absolute;
 		left: 10px;
-		top: 290px;
+		font: 14px @CalibriLight;
+		letter-spacing: .04em;
+		text-transform: uppercase;
 		transform: rotate(-90deg);
 		transform-origin: left;
 		padding: 0 60px;
+
 
 		&:before {
 			content: '';
@@ -32,10 +35,11 @@
 		}
 
 		&--represent {
-			font: 14px @CalibriLight;
-			color: @dimGray;
-			letter-spacing: .04em;
-			text-transform: uppercase;
+			top: 290px;
+		}
+
+		&--why-we {
+			top: 480px;
 		}
 	}
 }

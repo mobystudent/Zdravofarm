@@ -1,0 +1,59 @@
+.why-we {
+	padding: 200px 0;
+
+	&__content {
+		padding-left: 130px;
+		position: relative;
+	}
+
+	&__title {
+		font: 77px/80px @OswaldMedium;
+		text-transform: uppercase;
+		margin-bottom: 80px;
+	}
+
+	&__wrap {
+		display: flex;
+	}
+
+	&__list {
+		max-width: 720px;
+		flex: 0 0 auto;
+		margin-right: 90px;
+	}
+
+	&__item {
+		font: 36px/44px @OswaldLight;
+		letter-spacing: .04em;
+		text-transform: uppercase;
+		padding-left: 55px;
+		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: 75px;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 25px;
+			left: 10px;
+			height: 2px;
+			width: 20px;
+			background: @orange;
+		}
+	}
+
+	&__descrip {
+		flex: 1 1 auto;
+	}
+
+	&__text {
+		font: 24px/30px @CalibriLight;
+		letter-spacing: .04em;
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+}
