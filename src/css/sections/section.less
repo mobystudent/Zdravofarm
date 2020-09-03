@@ -58,15 +58,19 @@
 		}
 
 		&--represent {
-			top: 290px;
+			top: 53%;
+
+			@media screen and (max-width: 1919px) {
+				top: 68%;
+			}
 		}
 
 		&--why-we {
-			top: 480px;
+			top: 61%;
 		}
 
 		&--shop {
-			top: 700px;
+			top: 53%;
 		}
 	}
 
@@ -119,8 +123,12 @@
 		&--why-we {
 			margin-bottom: 80px;
 
-			@media screen and (max-width: 1365px) {
+			@media screen and (max-width: 1919px) {
 				margin-bottom: 60px;
+			}
+
+			@media screen and (max-width: 1365px) {
+				margin-bottom: 40px;
 			}
 		}
 
@@ -136,6 +144,50 @@
 			@media screen and (max-width: 1365px) {
 				padding-left: 60px;
 				margin-bottom: 40px;
+			}
+		}
+	}
+
+	&__text {
+		font: 24px/30px @CalibriLight;
+
+		@media screen and (max-width: 1919px) {
+			font-size: 22px;
+			line-height: 28px;
+		}
+
+		@media screen and (max-width: 1365px) {
+			font-size: 18px;
+			line-height: 22px;
+		}
+
+		&--represent {
+			max-width: 550px;
+			letter-spacing: .025em;
+			margin-bottom: 60px;
+
+			@media screen and (max-width: 1919px) {
+				margin-bottom: 50px;
+			}
+
+			@media screen and (max-width: 1365px) {
+				margin-bottom: 30px;
+			}
+		}
+
+		&--why-we {
+			letter-spacing: .04em;
+
+			&:not(:last-child) {
+				margin-bottom: 30px;
+
+				@media screen and (max-width: 1919px) {
+					margin-bottom: 25px;
+				}
+
+				@media screen and (max-width: 1365px) {
+					margin-bottom: 20px;
+				}
 			}
 		}
 	}

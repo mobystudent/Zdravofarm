@@ -3,27 +3,29 @@
 	text-align: center;
 	cursor: pointer;
 
-	&--represent {
+	&--main {
 		font: 16px @CalibriBold;
-		color: @dimGray;
-		background: @white;
 		border-radius: 30px;
-		padding: 20px 50px;
-		letter-spacing: .1em;
 		text-transform: uppercase;
 		min-width: 250px;
+		padding: 20px 50px;
+		letter-spacing: .1em;
 
 		@media screen and (max-width: 1919px) {
+			min-width: 220px;
 			padding-left: 30px;
 			padding-right: 30px;
-			min-width: 220px;
 		}
 
 		@media screen and (max-width: 1365px) {
 			font-size: 14px;
-			padding: 15px 25px;
 			min-width: 190px;
 		}
+	}
+
+	&--represent {
+		color: @dimGray;
+		background: @white;
 	}
 
 	&--next-screen {
@@ -31,38 +33,25 @@
 		bottom: 50px;
 		left: 50%;
 		width: 18px;
-		// height: 55px;
 		transform: translateX(-50%);
+		display: flex;
+		flex-flow: column;
+		align-items: center;
 
-		@media screen and (max-width: 1365px) {
-			// height: 45px;
-			bottom: 30px;
-		}
-
-		&:before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 50%;
-			width: 1px;
-			height: 25px;
-			background: @white;
-			transform: translateX(-50%);
-			transition: height .25s ease-in-out;
-			animation: changeSizeLine 1s ease-in-out infinite;
-			opacity: 0;
+		@media screen and (max-width: 1919px) {
+			bottom: 25px;
 		}
 
 		&:hover {
-			.btn__line {
-				height: 50px;
-				opacity: 0;
-			}
+			.btn__line
+				&:before {
+					opacity: 1;
+					width: 2px;
+				}
 
-			&:before {
-				opacity: 1;
-				width: 2px;
-			}
+				&:after {
+					opacity: 0;
+				}
 
 			.icon {
 				transform: translateY(10px);
@@ -127,6 +116,10 @@
 			color: @white;
 			padding-right: 35px;
 
+			@media screen and (max-width: 1919px) {
+				right: 100px;
+			}
+
 			@media screen and (max-width: 1365px) {
 				top: 35px;
 				right: 65px;
@@ -175,9 +168,14 @@
 		border-radius: 50%;
 		background: @dimGray;
 
+		@media screen and (max-width: 1919px) {
+			bottom: 40px;
+			right: 85px;
+		}
+
 		@media screen and (max-width: 1365px) {
-			right: 70px;
 			bottom: 30px;
+			right: 70px;
 		}
 	}
 
@@ -196,7 +194,7 @@
 		}
 
 		@media screen and (max-width: 1365px) {
-			flex: 14px;
+			font-size: 14px;
 			padding: 10px 15px;
 			min-width: 105px;
 		}
@@ -206,6 +204,10 @@
 
 			@media screen and (max-width: 1919px) {
 				margin-right: 25px;
+			}
+
+			@media screen and (max-width: 1365px) {
+				margin-right: 20px;
 			}
 		}
 
@@ -217,36 +219,45 @@
 	}
 
 	&--buy {
-		font: 16px @CalibriBold;
-		letter-spacing: .1em;
 		color: @white;
-		min-width: 250px;
-		border-radius: 30px;
-		padding: 20px 30px;
-		text-transform: uppercase;
 		background: @lightBlue;
-
-		@media screen and (max-width: 1919px) {
-			min-width: 220px;
-		}
-
-		@media screen and (max-width: 1365px) {
-			font-size: 14px;
-			padding: 15px 20px;
-			min-width: 190px;
-		}
 	}
 
 	&__line {
 		&--next-screen {
 			display: inline-block;
-			width: 1px;
+			width: 2px;
 			height: 40px;
-			background: @white;
-			margin: 0 auto -5px;
+			margin-bottom: 5px;
+			position: relative;
 
 			@media screen and (max-width: 1365px) {
 				height: 30px;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 50%;
+				width: 1px;
+				height: 25px;
+				background: @white;
+				transform: translateX(-50%);
+				transition: height .25s ease-in-out;
+				animation: changeSizeLine 1s ease-in-out infinite;
+				opacity: 0;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 50%;
+				width: 1px;
+				height: 100%;
+				background: @white;
+				transform: translateX(-50%);
 			}
 		}
 
