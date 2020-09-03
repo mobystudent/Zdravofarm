@@ -2,15 +2,9 @@
 	padding-top: 30px;
 	margin-bottom: 85px;
 
-	&__content {
-		position: relative;
-	}
-
-	&__title {
-		font: 77px/80px @OswaldMedium;
-		text-transform: uppercase;
-		margin-bottom: 60px;
-		padding-left: 130px;
+	@media screen and (max-width: 1919px) {
+		padding-top: 0;
+		margin-bottom: 65px;
 	}
 
 	&__wrap {
@@ -24,27 +18,9 @@
 			padding: 80px 55px 85px 55px;
 			position: relative;
 
-			&:before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: -160px;
-				width: 875px;
-				height: 100%;
-				background: @lightBlue;
-				z-index: -1;
-			}
-
-			&:after {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: -160px;
-				width: 875px;
-				height: 1185px;
-				background: url("../img/romb-shop.png") no-repeat;
-				background-size: cover;
-				z-index: -1;
+			@media screen and (max-width: 1919px) {
+				width: 590px;
+				padding: 70px 30px 55px 55px;
 			}
 		}
 
@@ -58,12 +34,21 @@
 		display: flex;
 		margin-bottom: 95px;
 		padding-left: 15px;
+
+		@media screen and (max-width: 1919px) {
+			margin-bottom: 80px;
+			padding-left: 0;
+		}
 	}
 
 	&__items {
 		display: flex;
 		flex-flow: wrap;
 		margin-right: -65px;
+
+		@media screen and (max-width: 1919px) {
+			margin-right: -25px;
+		}
 	}
 
 	&__item {
@@ -74,6 +59,12 @@
 		max-width: 160px;
 		margin-bottom: 45px;
 		margin-right: 65px;
+
+		@media screen and (max-width: 1919px) {
+			max-width: 150px;
+			margin-bottom: 35px;
+			margin-right: 25px;
+		}
 
 		&:hover {
 			.shop__name {
@@ -110,6 +101,10 @@
 	&__name {
 		font: 24px @CalibriRegular;
 		color: @white;
+
+		@media screen and (max-width: 1919px) {
+			font-size: 22px;
+		}
 	}
 
 	&__preview-title {
@@ -117,6 +112,11 @@
 		text-align: center;
 		padding-left: 255px;
 		margin-bottom: 65px;
+
+		@media screen and (max-width: 1919px) {
+			padding-left: 95px;
+			margin-bottom: 50px;
+		}
 	}
 
 	&__preview {
@@ -126,11 +126,19 @@
 	&__descrip {
 		margin-bottom: 115px;
 		padding-left: 20px;
+
+		@media screen and (max-width: 1919px) {
+			margin-bottom: 95px;
+		}
 	}
 
 	&__spec {
 		padding-left: 60px;
 		position: relative;
+
+		@media screen and (max-width: 1919px) {
+			padding-left: 40px;
+		}
 
 		&:before {
 			content: '';
@@ -144,16 +152,29 @@
 
 		&:not(:last-child) {
 			margin-bottom: 35px;
+
+			@media screen and (max-width: 1919px) {
+				margin-bottom: 25px;
+			}
 		}
 	}
 
 	&__spec-title {
 		font: 24px @CalibriBold;
 		margin-bottom: 10px;
+
+		@media screen and (max-width: 1919px) {
+			font-size: 22px;
+		}
 	}
 
 	&__text {
 		font: 24px/28px @CalibriLight;
+
+		@media screen and (max-width: 1919px) {
+			font-size: 22px;
+			line-height: 26px;
+		}
 	}
 
 	&__price {

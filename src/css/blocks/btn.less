@@ -161,8 +161,16 @@
 		max-width: 170px;
 		transition: color .25s ease-in-out, background .25s ease-in-out;
 
+		@media screen and (max-width: 1919px) {
+			max-width: 150px;
+		}
+
 		&:not(:last-child) {
 			margin-right: 40px;
+
+			@media screen and (max-width: 1919px) {
+				margin-right: 25px;
+			}
 		}
 
 		&:hover {

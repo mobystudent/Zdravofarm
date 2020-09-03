@@ -1,11 +1,19 @@
 .menu {
 	margin-bottom: 90px;
 
+	@media screen and (max-width: 1919px) {
+		margin-bottom: 45px;
+	}
+
 	&__item {
 		overflow: hidden;
 
 		&:not(:last-child) {
 			margin-bottom: 25px;
+
+			@media screen and (max-width: 1919px) {
+				margin-bottom: 10px;
+			}
 		}
 	}
 
@@ -19,6 +27,11 @@
 		position: relative;
 		display: inline-block;
 
+		@media screen and (max-width: 1919px) {
+			font-size: 30px;
+			line-height: 40px;
+		}
+
 		&:before {
 			content: '';
 			position: absolute;
@@ -30,12 +43,21 @@
 			background-size: cover;
 			transform: rotate(-90deg);
 			transition: transform .25s ease-in-out;
+
+			@media screen and (max-width: 1919px) {
+				top: 16px;
+				left: -30px;
+			}
 		}
 
 		&:hover {
 			font-family: @OswaldMedium;
 			transform: translateX(50px);
 			color: @darkOrange;
+
+			@media screen and (max-width: 1919px) {
+				transform: translateX(40px);
+			}
 		}
 	}
 }

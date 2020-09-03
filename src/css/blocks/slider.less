@@ -9,12 +9,20 @@
 		flex: 0 0 auto;
 		min-height: 650px;
 		padding: 0 20px 0 60px;
+
+		@media screen and (max-width: 1919px) {
+			width: 380px;
+		}
 	}
 
 	&__content {
 		&--shop {
 			padding-top: 75px;
 			margin-bottom: 30px;
+
+			@media screen and (max-width: 1919px) {
+				padding-top: 50px;
+			}
 		}
 	}
 
@@ -34,11 +42,24 @@
 			width: 1040px;
 			height: 625px;
 			margin-left: -190px;
+
+			@media screen and (max-width: 1919px) {
+				width: 150%;
+				height: auto;
+				margin-right: -210px;
+			}
 		}
 
 		&--shop {
-			width: 340px;
-			height: 510px;
+			width: 100%;
+			height: 100%;
+			max-width: 340px;
+			max-height: 510px;
+
+			@media screen and (max-width: 1919px) {
+				max-width: 100%;
+				max-height: none;
+			}
 		}
 	}
 

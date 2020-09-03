@@ -15,6 +15,10 @@
 				width: 2px;
 				height: 35px;
 				background: @white;
+
+				@media screen and (max-width: 1919px) {
+					height: 30px;
+				}
 			}
 		}
 	}
@@ -26,6 +30,11 @@
 		color: @white;
 		text-transform: uppercase;
 		transition: font .25s ease-in-out;
+
+		@media screen and (max-width: 1919px) {
+			font-size: 30px;
+			line-height: 40px;
+		}
 
 		&--active {
 			font-family: @OswaldMedium;

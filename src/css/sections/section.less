@@ -1,6 +1,22 @@
 .section {
 	position: relative;
 
+	&__content {
+		position: relative;
+
+		&--represent {
+			display: flex;
+		}
+
+		&--why-we {
+			padding-left: 130px;
+
+			@media screen and (max-width: 1919px) {
+				padding-left: 90px;
+			}
+		}
+	}
+
 	&__name {
 		position: absolute;
 		left: 10px;
@@ -44,6 +60,54 @@
 
 		&--shop {
 			top: 700px;
+		}
+	}
+
+	&__title {
+		font: 77px/80px @OswaldMedium;
+		text-transform: uppercase;
+
+		@media screen and (max-width: 1919px) {
+			font-size: 64px;
+		}
+
+		&--represent {
+			color: @white;
+			letter-spacing: .04em;
+			margin-bottom: 115px;
+			position: relative;
+
+			@media screen and (max-width: 1919px) {
+				margin-bottom: 90px;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: -50px;
+				left: 5px;
+				height: 1px;
+				width: 20px;
+				background: @orange;
+
+				@media screen and (max-width: 1919px) {
+					bottom: -40px;
+				}
+			}
+		}
+
+		&--why-we {
+			margin-bottom: 80px;
+		}
+
+		&--shop {
+			margin-bottom: 60px;
+			padding-left: 130px;
+
+			@media screen and (max-width: 1919px) {
+				padding-left: 90px;
+				margin-bottom: 50px;
+			}
 		}
 	}
 }
