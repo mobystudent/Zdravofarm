@@ -12,6 +12,18 @@
 		letter-spacing: .1em;
 		text-transform: uppercase;
 		min-width: 250px;
+
+		@media screen and (max-width: 1919px) {
+			padding-left: 30px;
+			padding-right: 30px;
+			min-width: 220px;
+		}
+
+		@media screen and (max-width: 1365px) {
+			font-size: 14px;
+			padding: 15px 25px;
+			min-width: 190px;
+		}
 	}
 
 	&--next-screen {
@@ -19,8 +31,13 @@
 		bottom: 50px;
 		left: 50%;
 		width: 18px;
-		height: 55px;
+		// height: 55px;
 		transform: translateX(-50%);
+
+		@media screen and (max-width: 1365px) {
+			// height: 45px;
+			bottom: 30px;
+		}
 
 		&:before {
 			content: '';
@@ -93,6 +110,10 @@
 		display: flex;
 		align-items: center;
 		margin-right: 60px;
+
+		@media screen and (max-width: 1365px) {
+			margin-right: 40px;
+		}
 	}
 
 	&--close {
@@ -105,6 +126,11 @@
 			letter-spacing: .07em;
 			color: @white;
 			padding-right: 35px;
+
+			@media screen and (max-width: 1365px) {
+				top: 35px;
+				right: 65px;
+			}
 
 			&:before {
 				content: '';
@@ -148,6 +174,11 @@
 		height: 58px;
 		border-radius: 50%;
 		background: @dimGray;
+
+		@media screen and (max-width: 1365px) {
+			right: 70px;
+			bottom: 30px;
+		}
 	}
 
 	&--shop {
@@ -157,12 +188,17 @@
 		border: 1px solid @white;
 		border-radius: 30px;
 		padding: 12px 20px;
-		width: 30%;
-		max-width: 170px;
+		min-width: 170px;
 		transition: color .25s ease-in-out, background .25s ease-in-out;
 
 		@media screen and (max-width: 1919px) {
-			max-width: 150px;
+			min-width: 150px;
+		}
+
+		@media screen and (max-width: 1365px) {
+			flex: 14px;
+			padding: 10px 15px;
+			min-width: 105px;
 		}
 
 		&:not(:last-child) {
@@ -184,12 +220,21 @@
 		font: 16px @CalibriBold;
 		letter-spacing: .1em;
 		color: @white;
-		width: 100%;
-		max-width: 250px;
+		min-width: 250px;
 		border-radius: 30px;
 		padding: 20px 30px;
 		text-transform: uppercase;
 		background: @lightBlue;
+
+		@media screen and (max-width: 1919px) {
+			min-width: 220px;
+		}
+
+		@media screen and (max-width: 1365px) {
+			font-size: 14px;
+			padding: 15px 20px;
+			min-width: 190px;
+		}
 	}
 
 	&__line {
@@ -198,7 +243,11 @@
 			width: 1px;
 			height: 40px;
 			background: @white;
-			margin: 0 auto;
+			margin: 0 auto -5px;
+
+			@media screen and (max-width: 1365px) {
+				height: 30px;
+			}
 		}
 
 		&--burger {
@@ -237,6 +286,10 @@
 			text-transform: uppercase;
 			display: inline-block;
 			margin-right: 10px;
+
+			@media screen and (max-width: 1365px) {
+				font-size: 14px;
+			}
 		}
 	}
 }
