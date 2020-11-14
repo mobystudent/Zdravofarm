@@ -3,12 +3,22 @@
 const gulp = require('gulp'),
 	del = require('del'),
 	pug = require('gulp-pug'),
-	imagemin = require('gulp-imagemin'),
 	less = require('gulp-less'),
 	groupcmq = require('gulp-group-css-media-queries'),
 	sourcemaps = require('gulp-sourcemaps'),
 	autoprefixer = require('gulp-autoprefixer'),
 	browserSync = require('browser-sync').create();
+
+/* images */
+const imagemin = require('gulp-imagemin'),
+	jp2000 = require('gulp-jpeg-2000'),
+	webp = require('gulp-webp');
+
+/* fonts */
+const ttf2svg = require('gulp-ttf-svg'),
+	ttf2woff = require('gulp-ttf2woff'),
+	ttf2woff2 = require('gulp-ttf2woff2'),
+	ttf2eot = require('gulp-ttf2eot');
 
 const dirBuild = 'build',
 	dirSrc = 'src',
@@ -26,9 +36,10 @@ const dirBuild = 'build',
 			html: dirSrc + '/template/*.html',
 			css: dirSrc + '/css/style.less',
 			pug: dirSrc + '/pug/**/*.pug',
-			fonts: dirSrc + '/fonts/**/*',
+			fonts: dirSrc + '/fonts/**/*.{ttf,otf}',
 			favicon: dirSrc + '/favicon/*',
 			img: dirSrc + '/img/**/*',
+			imgNF: dirSrc + '/img/**/*.{jpg,jpeg,png}',
 			js: dirSrc + '/js/script.js'
 		},
 		watch: {
@@ -65,6 +76,17 @@ function gulpLess() {
 /* conversion fonts */
 function gulpFonts() {
 	return gulp.src(path.src.fonts)
+		.pipe(gulp.dest(path.build.fonts))
+		.pipe(ttf2svg())
+		.pipe(gulp.dest(path.build.fonts))
+		.pipe(gulp.src(path.src.fonts))
+		.pipe(ttf2woff())
+		.pipe(gulp.dest(path.build.fonts))
+		.pipe(gulp.src(path.src.fonts))
+		.pipe(ttf2woff2())
+		.pipe(gulp.dest(path.build.fonts))
+		.pipe(gulp.src(path.src.fonts))
+		.pipe(ttf2eot())
 		.pipe(gulp.dest(path.build.fonts));
 }
 
@@ -83,6 +105,7 @@ function gulpHTML() {
 		.pipe(gulp.dest(path.build.html));
 }
 
+/* optimize images */
 function gulpImages() {
 	return gulp.src(path.src.img)
 		.pipe(imagemin([
@@ -90,6 +113,14 @@ function gulpImages() {
 			imagemin.optipng(),
 			imagemin.svgo()
 		]))
+		.pipe(gulp.dest(path.build.img))
+		.pipe(gulp.src(path.src.imgNF))
+		.pipe(jp2000())
+		.pipe(gulp.dest(path.build.img))
+		.pipe(gulp.src(path.src.imgNF))
+		.pipe(webp({
+			quality: 70
+		}))
 		.pipe(gulp.dest(path.build.img));
 }
 
