@@ -39,11 +39,25 @@
 	&__part {
 		width: 50%;
 
+		@media screen and (max-width: 1023px) {
+			width: 100%;
+		}
+
 		&--left {
 			padding: 45px 35px 40px 130px;
 
 			@media screen and (max-width: 1919px) {
 				padding: 30px 30px 30px 60px;
+			}
+
+			@media screen and (max-width: 1023px) {
+				order: 2;
+			}
+		}
+
+		&--right {
+			@media screen and (max-width: 1023px) {
+				order: 1;
 			}
 		}
 	}

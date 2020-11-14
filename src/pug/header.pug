@@ -1,0 +1,41 @@
+header.header
+	a.logo(href="#")
+		img(src="img/logo.png" alt="logo")
+	.header__control
+		a.btn.btn--basket(href="#")
+			span.btn__text.btn__text--header корзина
+			svg.icon.icon--basket
+				use.icon__item(xlink:href="#basket")
+		a.btn.btn--menu(href="#")
+			span.btn__text.btn__text--header меню
+			small.btn__line.btn__line--burger
+					
+.burger
+	a.btn.btn--close-burger(href="#") Закрыть
+	.burger__wrap
+		ul.menu
+			
+			- const menuItem = ['Главная', 'Почему здравофарм', 'Магазин', 'Кто пользуется', 'Спонсоры', 'Наши клиенты', 'Продукция', 'Видео-отзывы', 'Мероприятия'];
+			
+			- for (let i = 0; i < 9; i++)
+			
+				li.menu__item
+					a.menu__link(href="#")=menuItem[i]
+		.burger__footer
+			ul.social
+				
+				- const socialItem = ['Instagram', 'Telegram'];
+				
+				- for (let i = 0; i < 2; i++)
+				
+					li.social__item
+						a.social__link(href="#")=socialItem[i]
+						
+			ul.lang
+				
+				- const langItem = ['ua', 'ru'];
+				
+				- for (let i = 0; i < 2; i++)
+				
+					li.lang__item
+						a.lang__link(href="#")=langItem[i]

@@ -9,8 +9,16 @@
 		padding: 110px 0;
 	}
 
+	@media screen and (max-width: 1023px) {
+		padding: 85px 0;
+	}
+
 	&__wrap {
 		display: flex;
+
+		@media screen and (max-width: 1023px) {
+			flex-flow: column;
+		}
 	}
 
 	&__list {
@@ -26,6 +34,12 @@
 		@media screen and (max-width: 1365px) {
 			max-width: 450px;
 			margin-right: 50px;
+		}
+
+		@media screen and (max-width: 1023px) {
+			max-width: 100%;
+			margin-right: 0;
+			margin-bottom: 50px;
 		}
 	}
 
@@ -45,6 +59,10 @@
 			font-size: 26px;
 			line-height: 36px;
 			padding-left: 35px;
+		}
+
+		@media screen and (max-width: 1023px) {
+			margin-bottom: 25px;
 		}
 
 		&:not(:last-child) {

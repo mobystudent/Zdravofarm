@@ -6,6 +6,10 @@
 
 		&--represent {
 			display: flex;
+
+			@media screen and (max-width: 1023px) {
+				flex-flow: column;
+			}
 		}
 
 		&--why-we {
@@ -17,6 +21,11 @@
 
 			@media screen and (max-width: 1365px) {
 				padding-left: 60px;
+			}
+
+			@media screen and (max-width: 1023px) {
+				flex-flow: column;
+				padding-left: 0;
 			}
 		}
 	}
@@ -33,6 +42,11 @@
 
 		@media screen and (max-width: 1365px) {
 			padding: 0 40px;
+			font-size: 12px;
+		}
+
+		@media screen and (max-width: 1023px) {
+			display: none;
 		}
 
 		&:before {
@@ -144,6 +158,10 @@
 			@media screen and (max-width: 1365px) {
 				padding-left: 60px;
 				margin-bottom: 40px;
+			}
+
+			@media screen and (max-width: 1023px) {
+				padding-left: 0;
 			}
 		}
 	}

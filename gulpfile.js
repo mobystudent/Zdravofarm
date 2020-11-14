@@ -42,10 +42,12 @@ const dirBuild = 'build',
 		}
 	};
 
+/* clear build dir */
 function clean() {
 	return del(dirBuild + '/**');
 }
 
+/* conversion less */
 function gulpLess() {
 	return gulp.src(path.src.css)
 		.pipe(sourcemaps.init())
@@ -60,11 +62,13 @@ function gulpLess() {
 		.pipe(gulp.dest(path.build.css));
 }
 
+/* conversion fonts */
 function gulpFonts() {
 	return gulp.src(path.src.fonts)
 		.pipe(gulp.dest(path.build.fonts));
 }
 
+/* conversion pug */
 function gulpPug() {
 	return gulp.src(path.src.pug)
 		.pipe(pug({
@@ -73,6 +77,7 @@ function gulpPug() {
 		.pipe(gulp.dest(path.build.pug));
 }
 
+/* copy html in build dir */
 function gulpHTML() {
 	return gulp.src(path.src.html)
 		.pipe(gulp.dest(path.build.html));
@@ -88,6 +93,7 @@ function gulpImages() {
 		.pipe(gulp.dest(path.build.img));
 }
 
+/* copy favicon in build dir */
 function gulpFavicon() {
 	return gulp.src(path.src.favicon)
 		.pipe(gulp.dest(path.build.favicon));
@@ -104,22 +110,19 @@ function gulpWatch() {
 	});
 
 	gulp.watch(path.watch.css, gulp.series(gulpLess));
-	gulp.watch(path.watch.fonts, gulp.series(gulpFonts));
 	gulp.watch(path.watch.pug, gulp.series(gulpPug));
 	gulp.watch(path.watch.html, gulp.series(gulpHTML));
-	gulp.watch(path.watch.img, gulp.series(gulpImages));
-	gulp.watch(path.watch.favicon, gulp.series(gulpFavicon));
 	gulp.watch(path.watch.js, gulp.series(gulpJS));
 }
 
-const dev = gulp.series(clean, gulp.parallel(gulpLess, gulpHTML, gulpPug, gulpFonts, gulpFavicon, gulpJS)),
+const dev = gulp.series(clean, gulp.parallel(gulpLess, gulpHTML, gulpPug, gulpFonts, gulpFavicon, gulpJS, gulpImages)),
 	build = gulp.series(clean, gulp.parallel(gulpLess, gulpHTML, gulpFonts, gulpFavicon, gulpJS, gulpImages));
 
 exports.default = build;
 exports.watch = gulp.series(build, gulpWatch);
 exports.dev = gulp.series(dev, gulpWatch);
+exports.elem = gulp.series(gulp.parallel(gulpFonts, gulpFavicon, gulpImages));
 exports.clean = clean;
 exports.js = gulpJS;
-exports.less = gulpLess;
 exports.img = gulpImages;
 exports.fonts = gulpFonts;

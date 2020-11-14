@@ -103,6 +103,10 @@
 		@media screen and (max-width: 1365px) {
 			margin-right: 40px;
 		}
+
+		@media screen and (max-width: 1023px) {
+			margin-right: 30px;
+		}
 	}
 
 	&--close {
@@ -267,14 +271,22 @@
 			width: 28px;
 			background: @white;
 
+			@media screen and (max-width: 1023px) {
+				width: 20px;
+			}
+
 			&:before {
 				content: '';
 				position: absolute;
 				top: -8px;
 				left: 0;
 				height: 2px;
-				width: 28px;
+				width: 100%;
 				background: @white;
+
+				@media screen and (max-width: 1023px) {
+					top: -6px;
+				}
 			}
 
 			&:after {
@@ -283,8 +295,12 @@
 				bottom: -8px;
 				left: 0;
 				height: 2px;
-				width: 28px;
+				width: 100%;
 				background: @white;
+
+				@media screen and (max-width: 1023px) {
+					bottom: -6px;
+				}
 			}
 		}
 	}
@@ -300,6 +316,10 @@
 
 			@media screen and (max-width: 1365px) {
 				font-size: 14px;
+			}
+
+			@media screen and (max-width: 1023px) {
+				font-size: 12px;
 			}
 		}
 	}

@@ -1,0 +1,151 @@
+extends layout
+
+block title
+	title Главная
+
+block content
+	.wrapper
+		include header
+		
+		main.main
+			section.represent.represent--item-1.section
+				.container
+					.section__content.section__content--represent
+						small.section__name.section__name--represent
+							| пищевые добавки
+						.represent__part.represent__part--left
+							h1.section__title.section__title--represent
+								| время укреплять здоровье
+							p.section__text.section__text--represent
+								| Lorem ipsum dolor sit amet, consectetur, adipisicing elit, sed do eiusmod tempor. i/cididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+							a.btn.btn--main.btn--represent(href="#")
+								| в магазин
+						.represent__part.represent__part--right
+							.slider.slider--represent
+								#sliderRepresent.slider__content.slider__content--represent
+									.slider__slide.slider__slide--represent
+										picture.slider__img.slider__img--represent
+											img(src="img/cans.png" alt="cans")
+								.slider__control.slider__control--represent
+									.slider__count-slides
+										
+										- for (let i = 0; i < 3; i++)
+											
+											span.slider__num 0#{i+1}
+												
+											- if(i != 2)
+											
+												small.slider__separ
+													
+									a.btn.btn--subscribe(href="#")
+										| Подписаться
+												
+				a.btn.btn--next-screen(href="#")
+					small.btn__line.btn__line--next-screen
+					svg.icon.icon--next-screen
+						use.icon__item(xlink:href="#arrow")
+				a.btn.btn--recall(href="#")
+					svg.icon.icon--phone
+						use.icon__item(xlink:href="#phone")
+				
+			section.why-we.section
+				.container
+					.section__content.section__content--why-we
+						small.section__name.section__name--why-we
+							| почему здравофарм
+						h2.section__title.section__title--why-we
+							| Почему здравофарм
+						.why-we__wrap
+							ul.why-we__list
+								li.why-we__item
+									| слабые кости и хочется их укрепить?
+								li.why-we__item
+									| чувствуешь ли ты, что твой иммунитет уже ослабел и ни на что не хватает сил?
+								li.why-we__item
+									| заметили, что кожа теряет свою эластичность, а волосы стали выпадать чаще?
+								li.why-we__item
+									| слабые кости и хочется их укрепить?
+							.why-we__descrip
+								p.section__text.section__text--why-we
+									| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa
+								p.section__text.section__text--why-we
+									| Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								p.section__text.section__text--why-we
+									| ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+								p.section__text.section__text--why-we
+									| Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+			
+			section.shop.section
+				.container
+					.section__content.section__content--shop
+						small.section__name.section__name--shop
+							| магазин
+						h2.section__title.section__title--shop
+							| Магазин
+						.shop__wrap
+							.shop__part.shop__part--left
+								.background.background--shop
+								header.shop__buttons
+									a.btn.btn--shop.btn--shop-active(href="#") Капсулы
+									a.btn.btn--shop(href="#") Одежда
+									a.btn.btn--shop(href="#") Таблетки
+								.shop__items
+								
+									- for (let i = 0; i < 10; i++)
+								
+										a.shop__item(href="#")
+											picture.shop__img.img
+												img.img__item(src=`img/${i+1}.png` alt=`Гинкло билоба ${i+1}`)
+											span.shop__name
+												| Гинкло билоба
+
+							.shop__part.shop__part--right
+								h3.shop__preview-title
+									| Кальций Д3
+								.shop__preview
+									.slider.slider--shop
+										#sliderShow.slider__content.slider__content--shop
+											.slider__slide.slider__slide--shop
+												picture.slider__img.slider__img--shop.img
+													img.img__item(src="img/1-big.png" alt="1-big")
+										.slider__control.slider__control--shop
+											span.slider__prev
+												svg.icon.icon--arrow-slider.icon--arrow-prev
+													use.icon__item(xlink:href="#arrow")
+											span.slider__next
+												svg.icon.icon--arrow-slider.icon--arrow-next
+													use.icon__item(xlink:href="#arrow")
+									.shop__info
+										ul.shop__descrip
+											li.shop__spec
+												h5.shop__spec-title
+													| Описание:
+												p.section__text.section__text--shop
+													| Применяется при дефиците кальция, способствует укреплению зубов и костей
+											li.shop__spec
+												h5.shop__spec-title
+													| Применение:
+												p.section__text.section__text--shop
+													| Применяется при дефиците кальция, способствует укреплению зубов и костей
+											li.shop__spec
+												h5.shop__spec-title
+													| Противопоказания:
+												p.section__text.section__text--shop
+													| Индивидуальная чуствительность к отдельным компонентам, детям до 12 лет, беременным женщинам, кормящим грудью.
+											li.shop__spec
+												h5.shop__spec-title
+													| Состав:
+												p.section__text.section__text--shop
+													| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+											
+										footer.shop__counter
+											span.shop__price
+												| 130
+											article.counter
+												span.counter__btn.counter__btn--incr -
+												span.counter__count 1
+												span.counter__btn.counter__btn--decr +
+											a.btn.btn--main.btn--buy(href="#")
+												| в корзину
+			
+		//- include template-parts/modal.pug

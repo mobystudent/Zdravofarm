@@ -1,0 +1,52 @@
+.modal-bg
+
+.modal-recall.modal-window
+	form.modal-recall__form.form(action="#" method="POST")
+		h2.modal-recall__title.title--font Заказать звонок
+		.form__inputs
+			input(type="text" name="name" placeholder="Имя" required)
+			input(type="tel" name="phone" placeholder="Телефон" required)
+		button.modal-recall__btn Заказать
+		span.modal-recall__close.span--close Закрыть
+	.modal-thanks(data-close="true")
+		img.logo-orange(src="img/logo-orange.png" alt="logo")
+		h2.modal-thanks__title Благодарим вас за запрос
+		p.modal-thanks__p Ваш запрос на звонок принят. В течении 10 минут оператор свяжется с вами!
+		a.modal-thanks__btn.modal__btn(href="#") Вернуться
+
+.basket
+	.basket__wrap
+		h2.pop-up__title.title--font Корзина
+		.basket__info
+			.basket__list-wrap
+				ul.basket__list
+					
+					- for (let i = 0; i < 4; i++)
+					
+						li.basket-item
+							img.basket-item__img(src="img/1.png" alt="1")
+							span.basket-item__name Гинкло Билоба
+							span.basket-item__count.span--count 2 шт.
+							span.basket-item__price 190 грн
+							span.basket-item__close
+								
+			form.basket__form.form(action="" method="POST")
+				.form__wrap
+					h3.pop-up__title-h3 Оформление заказа
+					.form__inputs
+						input(type="text" name="name" placeholder="Имя" required)
+						input(type="tel" name="phone" placeholder="Телефон" required)
+						input(type="email" name="email" placeholder="Адрес доставки новой почтой" required)
+					.form__div-pay
+						.form__total
+							span.form__name Итого:
+							.form__div-count.div-count
+								span.form__number.div-count--numder 10000
+								span.form__curr.div-count--curr грн.
+						button.pop-up__btn Оформить
+		span.pop-up__close.span--close Закрыть
+	.pop-up__thanks
+		img.logo-orange(src="img/logo-orange.png" alt="logo")
+		h2.pop-up__thanks-title Благодарим вас за запрос
+		p.pop-up__thanks-p Ваша заявка принята. В течении часа оператор свяжется с вами для подтверждения деталей заказа!
+		a.pop-up__btn(href="#") Вернуться
